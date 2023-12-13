@@ -4,7 +4,8 @@ const path = require('path');
 
 const server = jsonServer.create();
 
-const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
+// const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
+const router = jsonServer.router('./db.json');
 
 server.use(jsonServer.defaults({}));
 server.use(jsonServer.bodyParser);
